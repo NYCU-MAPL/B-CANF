@@ -21,8 +21,8 @@ bash install.sh
 ## Pre-trained Weights
 |     Metrics    |   Low Rate   $\to$  High Rate     |
 |:--------------:|:---------------------------------:|
-|      PSNR      |     [1](), [2](), [3](), [4]()    |
-|     MS-SSIM    |     [1](), [2](), [3](), [4]()    |
+|      PSNR      |     [0](https://github.com/NYCU-MAPL/B-CANF/releases/download/v1.0.0/psnr_0.pth), [1](https://github.com/NYCU-MAPL/B-CANF/releases/download/v1.0.0/psnr_1.pth), [2](https://github.com/NYCU-MAPL/B-CANF/releases/download/v1.0.0/psnr_2.pth), [3](https://github.com/NYCU-MAPL/B-CANF/releases/download/v1.0.0/psnr_3.pth)    |
+|     MS-SSIM    |     [0](https://github.com/NYCU-MAPL/B-CANF/releases/download/v1.0.0/ssim_0.pth), [1](https://github.com/NYCU-MAPL/B-CANF/releases/download/v1.0.0/ssim_1.pth), [2](https://github.com/NYCU-MAPL/B-CANF/releases/download/v1.0.0/ssim_2.pth), [3](https://github.com/NYCU-MAPL/B-CANF/releases/download/v1.0.0/ssim_3.pth)    |
 
 ## Example Usage
 Specify run mode, checkpoint, source video* path, save directory, num_frames, coding intra-period and gop size accordingly.
