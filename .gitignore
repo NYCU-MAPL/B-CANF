@@ -6,7 +6,6 @@
 *.pth
 *.pt
 *.ckpt
-*.sh
 *.ipynb
 *.log
 *.zip
