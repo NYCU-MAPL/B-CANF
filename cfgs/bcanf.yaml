@@ -1,0 +1,65 @@
+NAME: B-CANF
+MODULES:
+  IntraCodec: 
+    TYPE: ANFIC
+    architecture: ANFHyperPriorCoder
+    quant_mode: round
+    condition: GaussianMixtureModel
+    num_features: 320
+    num_filters: 128
+    num_hyperpriors: 192
+    num_layers: 2
+    kernel_size: [5, 5]
+    use_context: True
+    use_mean: False
+    num_DQ_layer: 6
+    num_DQ_ch: 64
+
+  MENet: 
+    TYPE: MENet
+    level: 5
+
+  MPNet: 
+    TYPE: MPNet
+    channels: [240, 150, 90]
+    num_blocks: [8, 8, 8]
+
+  FSNet:
+    TYPE: FrameSynNet
+    channels: [3, 32, 64, 96]
+    num_row: 3
+    num_col: 6
+
+  MotionCodec:
+    TYPE: MotionCodec
+    architecture: BCANFCodec
+    quant_mode: round
+    condition: Gaussian
+    num_features: 128
+    num_filters: 106
+    num_hyperpriors: 128
+    num_predprior_filters: 128
+    num_layers: 2
+    kernel_size: [5, 3]
+    pred_kernel_size: 5
+    use_context: False
+    use_mean: True
+    num_DQ_layer: 6
+    num_DQ_ch: 64
+
+  ResidualCodec:
+    TYPE: ResidualCodec
+    architecture: BCANFCodec
+    quant_mode: round
+    condition: Gaussian
+    num_features: 128
+    num_filters: 128
+    num_hyperpriors: 128
+    num_predprior_filters: 128
+    num_layers: 2
+    kernel_size: [5, 3]
+    pred_kernel_size: 3
+    use_context: False
+    use_mean: True
+    num_DQ_layer: 6
+    num_DQ_ch: 64

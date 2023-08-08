@@ -1,0 +1,13 @@
+*.png
+*.pyc
+*.out
+*.tar
+*.pytorch
+*.pth
+*.pt
+*.ckpt
+*.sh
+*.ipynb
+*.log
+*.zip
+*.csv
